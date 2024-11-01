@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Ideas for Women</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f8f8; }
+        .container { width: 90%; max-width: 600px; margin: auto; padding: 20px; }
+        h1 { text-align: center; }
+        .options { margin-top: 20px; }
+        select, button { width: 100%; padding: 10px; margin: 10px 0; }
+        .result { margin-top: 20px; padding: 10px; background-color: #fff; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nail Ideas Generator</h1>
+        <div class="options">
+            <label for="color">Choose a Color:</label>
+            <select id="color">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="pink">Pink</option>
+                <option value="purple">Purple</option>
+                <option value="yellow">Yellow</option>
+            </select>
+
+            <label for="length">Choose Nail Length:</label>
+            <select id="length">
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="long">Long</option>
+            </select>
+
+            <button onclick="generateIdeas()">Generate Ideas</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function generateIdeas() {
+            const color = document.getElementById('color').value;
+            const length = document.getElementById('length').value;
+            let ideas = `You can try ${length} ${color} nails!`;
+            document.getElementById('result').innerText = ideas;
+        }
+    </script>
+</body>
+</html>
